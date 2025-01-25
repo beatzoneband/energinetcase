@@ -1,0 +1,270 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Api\\Case.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Api\\Case.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Api\\Case.Api.csproj",
+        "projectName": "Case.Api",
+        "projectPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Api\\Case.Api.csproj",
+        "packagesPath": "C:\\Users\\anna-\\.nuget\\packages\\",
+        "outputPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\anna-\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Application\\Case.Application.csproj": {
+                "projectPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Application\\Case.Application.csproj"
+              },
+              "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Infrastructure\\Case.Infrastructure.csproj": {
+                "projectPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Infrastructure\\Case.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\anna-\\.dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Application\\Case.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Application\\Case.Application.csproj",
+        "projectName": "Case.Application",
+        "projectPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Application\\Case.Application.csproj",
+        "packagesPath": "C:\\Users\\anna-\\.nuget\\packages\\",
+        "outputPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\anna-\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Domain\\Case.Domain.csproj": {
+                "projectPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Domain\\Case.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\anna-\\.dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Domain\\Case.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Domain\\Case.Domain.csproj",
+        "projectName": "Case.Domain",
+        "projectPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Domain\\Case.Domain.csproj",
+        "packagesPath": "C:\\Users\\anna-\\.nuget\\packages\\",
+        "outputPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\anna-\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\anna-\\.dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Infrastructure\\Case.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Infrastructure\\Case.Infrastructure.csproj",
+        "projectName": "Case.Infrastructure",
+        "projectPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Infrastructure\\Case.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\anna-\\.nuget\\packages\\",
+        "outputPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\anna-\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Domain\\Case.Domain.csproj": {
+                "projectPath": "C:\\Udvikler\\git-repo\\EnerginetCase\\src\\Case.Domain\\Case.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\anna-\\.dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
