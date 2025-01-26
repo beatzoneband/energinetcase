@@ -36,7 +36,7 @@ public sealed class ReservationsControllerTests : IClassFixture<OptionsProvider>
     }
 
     [Fact]
-    public async Task Put_should_update_update_license_plate()
+    public async Task Put_should_update_update_licence_plate()
     {
         //arrange
         var reservationRequest = new ReserveParkingSpot.Command(Guid.Empty, Guid.Empty, UserId, "AB12345", ReservationDate);
@@ -44,14 +44,14 @@ public sealed class ReservationsControllerTests : IClassFixture<OptionsProvider>
         
         var reservationId = (await GetReservation(ReservationDate, SpotId, UserId)).Id;
 
-        var updateReservationRequest = new ChangeReservationLicensePlate.Command(reservationId, "CD67890");
+        var updateReservationRequest = new ChangeReservationLicencePlate.Command(reservationId, "CD67890");
 
         //act
         _ = await _client.PutAsJsonAsync($"/parking-spots/{SpotId}/reservations", updateReservationRequest);
 
         //assert
         var reservation = await GetReservation(ReservationDate, SpotId, UserId);
-        reservation.LicensePlate.ShouldBe("CD67890");
+        reservation.LicencePlate.ShouldBe("CD67890");
     }
 
     private async Task<GetWeeklyParkingSpots.ReservationDto>? GetReservation(DateTime date, Guid spotId, Guid userId)

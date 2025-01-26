@@ -15,7 +15,7 @@ public class ReservationsController : ControllerBase
     }
 
     [HttpPost("{parkingSpotId:guid}/reservations")]
-    public async Task<ActionResult> Post(Guid parkingSpotId, [FromBody] ReserveParkingSpot.Command command)
+    public async Task<ActionResult> Post(Guid parkingSpotId, [FromBody]ReserveParkingSpot.Command command)
     {
         if (!ModelState.IsValid)
         {
@@ -32,7 +32,7 @@ public class ReservationsController : ControllerBase
 
     [HttpPut("{parkingSpotId:guid}/reservations")]
     public async Task<ActionResult> Put(
-        Guid parkingSpotId, [FromBody] ChangeReservationLicensePlate.Command command)
+        Guid parkingSpotId, [FromBody] ChangeReservationLicencePlate.Command command)
     {
         if (!ModelState.IsValid)
         {
@@ -42,7 +42,7 @@ public class ReservationsController : ControllerBase
         await _mediator.Send(command with
         {
             ReservationId = command.ReservationId,
-            LicensePlate = command.LicensePlate
+            LicencePlate = command.LicencePlate
         });
         return NoContent();
     }

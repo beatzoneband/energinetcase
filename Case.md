@@ -12,7 +12,7 @@ Foreløbig er følgende endpoints implementeret:
 ```
 parkingSpotId:	string($uuid)
 userId:			string($uuid)
-licensePlate:	string
+licencePlate:	string
 date:			string($date-time)
 ```
 Ovenstående endpoints kan motioneres run-time via [Swagger UI](https://localhost:7265/swagger/index.html).
@@ -22,12 +22,12 @@ Den næste funktionalitet der ønkes udviklet er muligheden for at kunne ændre 
 `PUT /parking-spots/{parkingSpotId}/reservations` der behandler et ændringsønske indeholdende:
 ```
 reservationId:	string($uuid)
-licensePlate:	string
+licencePlate:	string
 ```
 Følgende test beskriver den ønskede udvidelse til det eksisterende API:
 ```c#
     [Fact]
-    public async Task Put_should_update_update_license_plate()
+    public async Task Put_should_update_update_licence_plate()
     {
         //arrange
         var reservationRequest = new ReserveParkingSpot.Command(Guid.Empty, Guid.Empty, UserId, "AB12345", ReservationDate);
@@ -41,7 +41,7 @@ Følgende test beskriver den ønskede udvidelse til det eksisterende API:
 
         //assert
         var reservation = await GetReservation(ReservationDate, SpotId, UserId);
-        reservation.LicensePlate.ShouldBe("CD67890");
+        reservation.LicencePlate.ShouldBe("CD67890");
     }
 ```
 ## Hovedopgave

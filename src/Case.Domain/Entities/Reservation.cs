@@ -6,16 +6,16 @@ public sealed record Reservation(
     ReservationId Id,
     UserId UserId,
     EmployeeName EmployeeName,
-    LicensePlate LicensePlate,
+    LicencePlate LicencePlate,
     Date Date)
 {
 
     public static Reservation Create(ReservationId reservationId, UserId userId, EmployeeName name, 
-        LicensePlate licensePlate, Date date ) 
-        => new(reservationId, userId, name, licensePlate, date);
+        LicencePlate licencePlate, Date date ) 
+        => new(reservationId, userId, name, licencePlate, date);
 
-    public Reservation WithNewLicensePlate(string newLicensePlate)
+    public Reservation WithNewLicencePlate(string newLicencePlate)
     {
-        return this with { LicensePlate = new LicensePlate(newLicensePlate) };
+        return this with { LicencePlate = new LicencePlate(newLicencePlate) };
     }
 }

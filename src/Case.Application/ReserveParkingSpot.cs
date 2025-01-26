@@ -10,7 +10,7 @@ namespace Case.Application;
 public static class ReserveParkingSpot
 {
     public sealed record Command(Guid ParkingSpotId, Guid ReservationId, Guid UserId,
-        string LicensePlate, DateTime Date) : IRequest;
+        string LicencePlate, DateTime Date) : IRequest;
 
     internal class Handler : IRequestHandler<Command>
     {
@@ -44,7 +44,7 @@ public static class ReserveParkingSpot
             }
 
             var reservation = new Reservation(request.ReservationId, user.Id, new EmployeeName(user.FullName),
-            request.LicensePlate, new Date(request.Date));
+            request.LicencePlate, new Date(request.Date));
 
             parkingSpotToReserve.AddReservation(reservation, new Date(_clock.Current()));
 

@@ -33,6 +33,4 @@ app.MapControllers();
 
 app.Run();
 
-public partial class Program
-{
-} //Allows the WebApplicationFactory<> to instantiate the object during testing
+public partial class Program { } //Allows the WebApplicationFactory<> to instantiate the object during testing

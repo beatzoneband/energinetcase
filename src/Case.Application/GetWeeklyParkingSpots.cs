@@ -41,7 +41,7 @@ public static class GetWeeklyParkingSpots
                 EmployeeName = x.EmployeeName,
                 UserId = x.UserId.Value,
                 Date = x.Date.Value.Date,
-                LicensePlate = x.LicensePlate.Value
+                LicencePlate = x.LicencePlate.Value
             })
         };
 
@@ -60,6 +60,6 @@ public static class GetWeeklyParkingSpots
         public string EmployeeName { get; set; }
         public Guid UserId { get; set; }
         public DateTime Date { get; set; }
-        public string LicensePlate { get; set; }
+        public string LicencePlate { get; set; }
     }
 }

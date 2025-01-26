@@ -6,9 +6,9 @@ using MediatR;
 
 namespace Case.Application;
 
-public static class ChangeReservationLicensePlate
+public static class ChangeReservationLicencePlate
 {
-    public sealed record Command(Guid ReservationId, string LicensePlate) : IRequest;
+    public sealed record Command(Guid ReservationId, string LicencePlate) : IRequest;
     
     internal class Handler : IRequestHandler<Command>
     {
@@ -22,7 +22,7 @@ public static class ChangeReservationLicensePlate
         public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
         {
             var reservationId = request.ReservationId;
-            var licensePlate = request.LicensePlate;
+            var licencePlate = request.LicencePlate;
             
             var weeklyParkingSpots = (await _repository.GetAllAsync());
             
@@ -42,7 +42,7 @@ public static class ChangeReservationLicensePlate
                 throw new ReservationNotFoundException(reservationId);
             }
             
-            var updatedReservation = reservation.WithNewLicensePlate(licensePlate);
+            var updatedReservation = reservation.WithNewLicencePlate(licencePlate);
             weeklyParkingSpot.UpdateReservation(updatedReservation);
             
             await _repository.UnitOfWork.SaveChangesAsync(cancellationToken);

@@ -1,12 +1,12 @@
 namespace Case.Domain.Exceptions;
 
-public sealed class InvalidLicensePlateException : CustomException
+public sealed class InvalidLicencePlateException : CustomException
 {
-    public string LicensePlate { get; }
+    public string LicencePlate { get; }
 
-    public InvalidLicensePlateException(string licensePlate) 
-        : base($"License plate: {licensePlate} is invalid.")
+    public InvalidLicencePlateException(string licencePlate) 
+        : base($"Licence plate: {licencePlate} is invalid.")
     {
-        LicensePlate = licensePlate;
+        LicencePlate = licencePlate;
     }
 }
