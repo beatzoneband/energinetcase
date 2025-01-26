@@ -8,7 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen((options =>
+{
+    options.CustomSchemaIds(x => x.FullName?.Replace("+", ".", StringComparison.Ordinal));
+}));
 
 builder.Services.AddInfrastructure();
 builder.Services.AddApplication();
@@ -29,4 +32,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-public partial class Program { } //Allows the WebApplicationFactory<> to instantiate the object during testing
+
+public partial class Program
+{
+} //Allows the WebApplicationFactory<> to instantiate the object during testing

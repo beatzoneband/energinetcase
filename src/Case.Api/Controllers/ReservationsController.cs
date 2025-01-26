@@ -15,12 +15,34 @@ public class ReservationsController : ControllerBase
     }
 
     [HttpPost("{parkingSpotId:guid}/reservations")]
-    public async Task<ActionResult> Post(Guid parkingSpotId, [FromBody]ReserveParkingSpot.Command command)
+    public async Task<ActionResult> Post(Guid parkingSpotId, [FromBody] ReserveParkingSpot.Command command)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
         await _mediator.Send(command with
         {
             ReservationId = Guid.NewGuid(),
             ParkingSpotId = parkingSpotId
+        });
+        return NoContent();
+    }
+
+    [HttpPut("{parkingSpotId:guid}/reservations")]
+    public async Task<ActionResult> Put(
+        Guid parkingSpotId, [FromBody] ChangeReservationLicensePlate.Command command)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        await _mediator.Send(command with
+        {
+            ReservationId = command.ReservationId,
+            LicensePlate = command.LicensePlate
         });
         return NoContent();
     }

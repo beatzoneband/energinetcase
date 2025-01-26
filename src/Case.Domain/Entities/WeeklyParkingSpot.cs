@@ -38,4 +38,14 @@ public sealed class WeeklyParkingSpot
 
         _reservations.Add(reservation);
     }
+
+    public void UpdateReservation(Reservation updatedReservation)
+    {
+        if (_reservations.RemoveWhere(r => r.Id == updatedReservation.Id) == 0)
+        {
+            throw new ReservationNotFoundException(updatedReservation.Id.Value);
+        }
+
+        _reservations.Add(updatedReservation);
+    }
 }
